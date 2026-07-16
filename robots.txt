@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ag4800-lgtm.github.io/sitemap.xml
+Sitemap: https://www.thelanguageblueprint.org/sitemap.xml

@@ -73,7 +73,7 @@ Since this is a plain static site, any of these work (all have free tiers):
 - **GitHub Pages** — push this folder to a GitHub repo and enable Pages in repo settings
 - **Vercel** — `vercel` CLI or drag-and-drop deploy
 
-Once deployed, point your domain (`thelanguageblueprint.com`) at it via your domain registrar's DNS settings — Netlify/Vercel both walk you through this.
+Once deployed, point your domain (`thelanguageblueprint.org`) at it via your domain registrar's DNS settings — Netlify/Vercel both walk you through this.
 
 ## 7. Before you take your first paying client
 
