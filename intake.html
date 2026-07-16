@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Intake Form | The Language Blueprint LLC</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-icon.svg" alt="The Language Blueprint LLC logo">
+      The Language Blueprint
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="intake.html">Client Intake</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#book" class="btn btn-primary">Book a Consultation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:64px 0;">
+  <div class="container">
+    <h1>Client Intake Form</h1>
+    <p class="lede">Tell us about your goals so we can recommend the right package and prepare for your first session.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <!--
+      This form submits via Formspree (no backend server required).
+      Setup: create a free account at https://formspree.io, create a new form,
+      and replace YOUR_FORM_ID below with the ID Formspree gives you.
+      Use a SEPARATE Formspree form ID from the general contact form so
+      intake submissions are easy to filter.
+    -->
+    <form class="form-card" action="https://formspree.io/f/YOUR_INTAKE_FORM_ID" method="POST">
+
+      <label for="client_name">Client Name</label>
+      <input type="text" id="client_name" name="client_name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="service">Service Requested</label>
+      <select id="service" name="service" required>
+        <option value="">Select a service…</option>
+        <option>District Consulting (SLIFE + AI Integration)</option>
+        <option>School AI Tool Pilot</option>
+        <option>Private Student 12-Week Trajectory — Standard</option>
+        <option>Private Student 12-Week Trajectory — Intensive</option>
+        <option>SOP &amp; Academic Writing Mentorship</option>
+        <option>Teacher Mentorship</option>
+        <option>Not sure yet — please advise</option>
+      </select>
+
+      <label for="who_for">Student / Teacher / District Info</label>
+      <textarea id="who_for" name="who_for" rows="3" placeholder="Who is this for? Grade level, role, district/school name, etc."></textarea>
+
+      <label for="goals">Goals</label>
+      <textarea id="goals" name="goals" rows="4" placeholder="What would you like to achieve?" required></textarea>
+
+      <label for="schedule">Preferred Schedule</label>
+      <input type="text" id="schedule" name="schedule" placeholder="e.g. weekday evenings, specific days/times">
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="ai_consent" name="ai_consent" value="Consented" required>
+        <label for="ai_consent">
+          I consent to the use of AI-supported tools for instructional design, diagnostics, and feedback.
+          I understand that no personally identifiable student data will be stored, shared, or used for model training.
+        </label>
+      </div>
+
+      <label for="signature">Signature (type full name)</label>
+      <input type="text" id="signature" name="signature" required>
+
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px;">Submit Intake Form</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-icon.svg" alt="The Language Blueprint LLC logo">
+          The Language Blueprint LLC
+        </a>
+        <p class="small" style="color:#90A2B3; max-width:320px; margin-top:12px;">AI-enhanced learning and human-centered instructional design for multilingual learners, educators, and districts.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="intake.html">Client Intake</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> The Language Blueprint LLC. All Rights Reserved.</span>
+      <span>Middletown, NY</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
