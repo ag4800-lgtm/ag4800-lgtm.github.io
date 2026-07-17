@@ -2,7 +2,7 @@
 
 **The Language Blueprint LLC**
 77 Greencrest Drive, Middletown, NY 10941
-anthony@thelanguageblueprint.org
+thelanguageblueprint01@gmail.com
 
 ---
 
