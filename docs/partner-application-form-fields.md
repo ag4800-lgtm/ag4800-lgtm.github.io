@@ -1,30 +1,24 @@
-# Partner Application — Google Form Setup
+# Partner Application Form
 
-I can't create Google Forms directly (no Forms API access), but this takes about 5 minutes to build yourself. Go to **forms.google.com** → **Blank form**, title it "Partner Application — The Language Blueprint LLC", and add these fields in order:
+The partner application now lives directly on the site at `partner-application.html`, using the same pattern as the client intake form (a plain HTML form submitting via Formspree — no backend, no separate Google Form).
 
-1. **Full Name** — Short answer, required
-2. **Email** — Short answer, required (Settings → Response validation → Email)
-3. **Phone** — Short answer
-4. **Area(s) of Expertise** — Checkboxes, allow "Other":
-   - District & School Consulting
-   - Private Student Instruction (SLIFE / Multilingual Learners)
-   - Academic & Professional Writing Coaching
-   - Teacher Mentorship / Coaching
-   - AI-Enhanced Learning Tools
-5. **Certifications / Credentials** — Paragraph (e.g. NYS certification area, TESOL/Applied Linguistics degree, relevant licenses)
-6. **Years of Experience** — Short answer or Dropdown (0–2, 3–5, 6–10, 10+)
-7. **Current Caseload Capacity** — Short answer ("How many clients/projects could you take on right now?")
-8. **Geographic Area / Districts You Can Serve** — Short answer
-9. **Why do you want to partner with The Language Blueprint LLC?** — Paragraph, required
-10. **Resume / CV** — File upload (Google Forms supports this natively; requires responders to be signed into a Google account to upload)
-11. **LinkedIn or Portfolio URL** — Short answer, optional
-12. **How did you hear about us?** — Short answer or Dropdown
+## Setup
 
-**Settings to turn on** (gear icon):
-- Collect email addresses: On
-- Response receipts: "Always"
-- Restrict to 1 response: your choice (off is usually fine for recruiting)
+1. Go to **formspree.io** and create a **new form** (name it something like "Partner Applications" — keep it separate from the contact and intake forms so submissions are easy to filter).
+2. Copy the form ID Formspree gives you.
+3. Replace `YOUR_PARTNER_FORM_ID` in `partner-application.html`'s `<form action="https://formspree.io/f/YOUR_PARTNER_FORM_ID">` with that ID.
 
-Once built, click **Send** → copy the **link** (use the "Shorten URL" checkbox for a clean `forms.gle/...` link) and send it to me — I'll wire it into the "Apply to Partner" button on `partner.html`, replacing the `REPLACE_WITH_PARTNER_FORM_LINK` placeholder.
+That's it — Formspree doesn't require you to predefine fields in their dashboard; it just receives whatever the HTML form sends and emails it to you.
 
-Responses land automatically in a connected Google Sheet if you click the Sheets icon in the Responses tab — recommended so you have a running list of applicants.
+## Fields included on the page
+
+- Full Name, Email, Phone
+- Area(s) of Expertise (checkboxes: District & School Consulting, Private Student Instruction, Academic & Professional Writing Coaching, Teacher Mentorship/Coaching, AI-Enhanced Learning Tools)
+- Certifications / Credentials
+- Years of Experience (dropdown)
+- Current Caseload Capacity
+- Geographic Area / Districts You Can Serve
+- Why do you want to partner with us? (required)
+- Resume / CV (file upload — Formspree supports this natively)
+- LinkedIn or Portfolio URL
+- How did you hear about us?
