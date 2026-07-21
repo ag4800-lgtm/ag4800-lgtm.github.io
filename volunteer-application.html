@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer Application | The Language Blueprint LLC</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-icon.svg" alt="The Language Blueprint LLC logo">
+      The Language Blueprint
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="partner.html">Partner With Us</a></li>
+      <li><a href="intake.html">Client Intake</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#book" class="btn btn-primary">Book a Consultation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding:64px 0;">
+  <div class="container">
+    <h1>Volunteer Application</h1>
+    <p class="lede">Help us deliver free resume building and job search support to high schoolers and adults, especially newly arrived immigrants. Undergraduate and graduate students are especially welcome.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <!--
+      This form submits via Formspree (no backend server required).
+      Setup: create a free account at https://formspree.io, create a new form,
+      and replace YOUR_VOLUNTEER_FORM_ID below with the ID Formspree gives you.
+      Use a SEPARATE Formspree form ID from the contact/intake/partner forms so
+      volunteer applications are easy to filter.
+    -->
+    <form class="form-card" action="https://formspree.io/f/YOUR_VOLUNTEER_FORM_ID" method="POST" enctype="multipart/form-data">
+
+      <label for="applicant_name">Full Name</label>
+      <input type="text" id="applicant_name" name="applicant_name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="student_status">Student Status</label>
+      <select id="student_status" name="student_status">
+        <option value="">Select…</option>
+        <option>Undergraduate student</option>
+        <option>Graduate student</option>
+        <option>Not currently a student</option>
+      </select>
+
+      <label for="school">School / Institution (if applicable)</label>
+      <input type="text" id="school" name="school">
+
+      <label for="interests">Area(s) of Interest</label>
+      <div class="checkbox-row" style="flex-direction:column; align-items:flex-start; gap:8px;">
+        <div><input type="checkbox" id="int_resume" name="interests[]" value="Resume & Cover Letter Coaching"> <label for="int_resume" style="display:inline;">Resume &amp; Cover Letter Coaching</label></div>
+        <div><input type="checkbox" id="int_interview" name="interests[]" value="Mock Interviews"> <label for="int_interview" style="display:inline;">Mock Interviews</label></div>
+        <div><input type="checkbox" id="int_jobsearch" name="interests[]" value="Job Search Support"> <label for="int_jobsearch" style="display:inline;">Job Search Support</label></div>
+        <div><input type="checkbox" id="int_bilingual" name="interests[]" value="Bilingual/Interpretation Support"> <label for="int_bilingual" style="display:inline;">Bilingual / Interpretation Support</label></div>
+      </div>
+
+      <label for="languages">Language(s) Spoken (besides English)</label>
+      <input type="text" id="languages" name="languages">
+
+      <label for="availability">Availability</label>
+      <input type="text" id="availability" name="availability" placeholder="e.g. weekday evenings, weekends">
+
+      <label for="format">Preferred Format</label>
+      <select id="format" name="format">
+        <option value="">Select…</option>
+        <option>Remote</option>
+        <option>In-person</option>
+        <option>Either</option>
+      </select>
+
+      <label for="why">Why do you want to volunteer with us?</label>
+      <textarea id="why" name="why" rows="4" required></textarea>
+
+      <label for="experience">Relevant Experience (optional)</label>
+      <textarea id="experience" name="experience" rows="3"></textarea>
+
+      <label for="resume">Resume (optional)</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+      <label for="referral">How did you hear about us?</label>
+      <input type="text" id="referral" name="referral">
+
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px;">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-icon.svg" alt="The Language Blueprint LLC logo">
+          The Language Blueprint LLC
+        </a>
+        <p class="small" style="color:#90A2B3; max-width:320px; margin-top:12px;">AI-enhanced learning and human-centered instructional design for multilingual learners, struggling readers, educators, and districts. Hablamos Español.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="partner.html">Partner With Us</a></li>
+          <li><a href="intake.html">Client Intake</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> The Language Blueprint LLC. All Rights Reserved.</span>
+      <span>Middletown, NY</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
