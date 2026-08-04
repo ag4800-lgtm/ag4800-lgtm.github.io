@@ -1,0 +1,224 @@
+<title>The Language Blueprint LLC — Flyer</title>
+<style>
+  :root{
+    --navy:#122A43; --navy-light:#1E3A5C; --amber:#E8A33D; --amber-dark:#C9812A;
+    --teal:#2BB3A3; --bg:#FAF9F6; --bg-alt:#F1EEE6; --text:#1C2B3A; --muted:#5A6B7B; --border:#E3DFD4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:40px 16px; display:flex; justify-content:center;
+    font-family:'Segoe UI', Inter, Arial, sans-serif;
+    background:#e7e2d6;
+  }
+  @media (prefers-color-scheme: dark){
+    body{ background:#0b1420; }
+  }
+  :root[data-theme="dark"] body{ background:#0b1420; }
+  :root[data-theme="light"] body{ background:#e7e2d6; }
+
+  .page{
+    width:8.5in; min-height:11in; background:var(--bg); color:var(--text);
+    box-shadow:0 20px 60px rgba(0,0,0,0.25);
+    padding:0.55in 0.6in; position:relative; overflow:hidden;
+  }
+
+  /* faint blueprint grid watermark */
+  .grid-bg{
+    position:absolute; inset:0; pointer-events:none; opacity:0.05;
+    background-image:
+      repeating-linear-gradient(0deg, var(--navy) 0 1px, transparent 1px 48px),
+      repeating-linear-gradient(90deg, var(--navy) 0 1px, transparent 1px 48px);
+  }
+
+  .content{ position:relative; z-index:1; }
+
+  .brandbar{ display:flex; align-items:center; gap:18px; margin-bottom:6px; }
+  .brandbar svg{ height:56px; width:auto; }
+
+  .tagline{
+    font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--teal); font-weight:600; margin:2px 0 26px 0;
+  }
+
+  h1{
+    font-family:'Poppins','Segoe UI',Arial,sans-serif;
+    font-size:29px; line-height:1.15; color:var(--navy); margin:0 0 8px 0; font-weight:700;
+  }
+  .lede{
+    font-size:13.5px; color:var(--muted); max-width:6.6in; margin:0 0 18px 0; line-height:1.45;
+  }
+
+  .section-label{
+    font-family:'Poppins','Segoe UI',Arial,sans-serif; font-size:11px; font-weight:700;
+    letter-spacing:1px; text-transform:uppercase; color:var(--navy-light); margin:0 0 8px 0;
+  }
+
+  .offer-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:16px;
+  }
+  .card{
+    background:#fff; border:1px solid var(--border); border-radius:12px; padding:13px 15px;
+    box-shadow:0 6px 16px rgba(18,42,67,0.06); display:flex; flex-direction:column;
+  }
+  .card .badge{
+    display:inline-block; background:var(--amber); color:var(--navy); font-weight:700;
+    font-size:9.5px; letter-spacing:0.5px; text-transform:uppercase; padding:3px 9px;
+    border-radius:100px; margin-bottom:7px; align-self:flex-start;
+  }
+  .card.free .badge{ background:var(--teal); color:#fff; }
+  .card h3{
+    font-family:'Poppins','Segoe UI',Arial,sans-serif; color:var(--navy); font-size:14.5px;
+    margin:0 0 4px 0; font-weight:600; line-height:1.25;
+  }
+  .card .fee{ font-family:'Poppins',Arial,sans-serif; color:var(--navy); font-weight:700; font-size:16.5px; margin-bottom:5px; }
+  .card .fee span{ font-size:10px; font-weight:500; color:var(--muted); margin-left:4px; }
+  .card ul{ margin:0; padding-left:16px; font-size:11px; color:var(--text); line-height:1.45; flex-grow:1; }
+  .card li{ margin-bottom:2px; }
+
+  .team-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:16px;
+  }
+  .person{
+    background:var(--bg-alt); border-radius:12px; padding:13px 14px; border:1px solid var(--border);
+  }
+  .person .initials{
+    width:38px; height:38px; border-radius:50%; background:var(--navy);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:'Poppins',Arial,sans-serif; font-weight:700; font-size:13px; margin-bottom:8px;
+  }
+  .person .role{
+    display:inline-block; font-size:8.5px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase;
+    color:var(--teal); margin-bottom:3px;
+  }
+  .person h4{ margin:0 0 5px 0; color:var(--navy); font-family:'Poppins',Arial,sans-serif; font-size:12.5px; line-height:1.25; }
+  .person p{ margin:0; font-size:10px; color:var(--muted); line-height:1.42; }
+
+  .footer-bar{
+    background:var(--navy); color:#fff; border-radius:14px; padding:20px 24px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  .footer-bar .cta{
+    font-family:'Poppins',Arial,sans-serif; font-size:17px; font-weight:600; margin:0 0 4px 0;
+  }
+  .footer-bar .sub{ font-size:12px; color:#B9C6D3; margin:0; }
+  .contact{ text-align:right; font-size:13px; line-height:1.7; }
+  .contact strong{ color:var(--amber); }
+  .es{ font-size:11.5px; color:#DDE6EE; margin-top:2px; }
+
+  @media print{
+    body{ background:#fff; padding:0; }
+    .page{ box-shadow:none; width:100%; min-height:0; }
+  }
+</style>
+
+<div class="page">
+  <div class="grid-bg"></div>
+  <div class="content">
+
+    <div class="brandbar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="The Language Blueprint LLC icon">
+        <rect x="0" y="0" width="100" height="100" rx="24" fill="#122A43"/>
+        <g stroke="#FFFFFF" stroke-width="1" opacity="0.07">
+          <line x1="25" y1="8" x2="25" y2="92"/>
+          <line x1="50" y1="8" x2="50" y2="92"/>
+          <line x1="75" y1="8" x2="75" y2="92"/>
+          <line x1="8" y1="25" x2="92" y2="25"/>
+          <line x1="8" y1="50" x2="92" y2="50"/>
+          <line x1="8" y1="75" x2="92" y2="75"/>
+        </g>
+        <rect x="20" y="22" width="60" height="40" rx="14" fill="#E8A33D"/>
+        <polygon points="32,60 24,77 45,60" fill="#E8A33D"/>
+        <line x1="30" y1="34" x2="62" y2="34" stroke="#122A43" stroke-width="5" stroke-linecap="round"/>
+        <line x1="30" y1="44" x2="68" y2="44" stroke="#122A43" stroke-width="5" stroke-linecap="round"/>
+        <line x1="30" y1="54" x2="54" y2="54" stroke="#122A43" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="74" cy="44" r="6" fill="#2BB3A3" stroke="#122A43" stroke-width="2"/>
+      </svg>
+      <div>
+        <div style="font-family:'Poppins','Segoe UI',Arial,sans-serif; font-weight:700; font-size:22px; color:var(--navy); line-height:1.1;">The Language Blueprint <span style="font-weight:400;">LLC</span></div>
+      </div>
+    </div>
+    <div class="tagline">AI-Enhanced Learning &middot; Human-Centered Design</div>
+
+    <h1>Personalized language &amp; literacy support, built around your goals.</h1>
+    <p class="lede">Multilingual learners, struggling readers, grad-school applicants, and educators all get a plan built for them — not a one-size-fits-all curriculum. Based in Middletown, NY. Hablamos español.</p>
+
+    <div class="offer-grid">
+      <div class="card">
+        <span class="badge">Students &amp; Families</span>
+        <h3>12-Week Diagnostic &amp; Trajectory</h3>
+        <div class="fee">$1,800<span>standard</span></div>
+        <ul>
+          <li>Full diagnostic: reading, writing, speaking, listening</li>
+          <li>Personalized 12-week plan</li>
+          <li>Weekly or twice-weekly sessions</li>
+          <li>Final proficiency report</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">Applicants</span>
+        <h3>SOP &amp; Academic Writing Mentorship</h3>
+        <div class="fee">$450<span>per package</span></div>
+        <ul>
+          <li>Brainstorming &amp; outlining session</li>
+          <li>In-depth draft feedback</li>
+          <li>Final polish for tone &amp; clarity</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">Educators</span>
+        <h3>Teacher Mentorship</h3>
+        <div class="fee">$1,200<span>per 6-week cycle</span></div>
+        <ul>
+          <li>Classroom observation cycle</li>
+          <li>Actionable, growth-oriented feedback</li>
+          <li>AI-supported lesson planning support</li>
+        </ul>
+      </div>
+      <div class="card free">
+        <span class="badge">Free</span>
+        <h3>Resume &amp; Job Search Support</h3>
+        <div class="fee" style="font-size:15px;">No cost</div>
+        <ul>
+          <li>Resume &amp; cover letter writing</li>
+          <li>Job search strategy</li>
+          <li>For high schoolers &amp; adults, especially newly arrived immigrants</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-label">Our Team</div>
+    <div class="team-grid">
+      <div class="person">
+        <div class="initials">AG</div>
+        <span class="role">Founder</span>
+        <h4>Anthony J. Guzmán</h4>
+        <p>NYS-certified ENL/ELA teacher &middot; M.A. TESOL &amp; English Education, Teachers College, Columbia University &middot; Ed.D. student, Applied Linguistics. Son of an immigrant mother — this work is personal.</p>
+      </div>
+      <div class="person">
+        <div class="initials">AL</div>
+        <span class="role">Partner Educator</span>
+        <h4>Alex Luciano</h4>
+        <p>Bilingual educator &amp; adult ESL instructor with 20+ years across K&ndash;12 and adult education. NYS-certified in Childhood, Special, and Bilingual Education. Creator of the Diagnose &rarr; Draft &rarr; Calibrate framework for AI-supported, teacher-centered instruction; published in eSchool News, Society &amp; AI, and McGraw Hill.</p>
+      </div>
+      <div class="person">
+        <div class="initials">SS</div>
+        <span class="role">Partner Educator</span>
+        <h4>Sofia Solari</h4>
+        <p>High School Spanish &amp; ESL teacher, Hyde School (Bath, ME). B.A. Spanish &amp; Education, Colby College (Cum Laude); M.A. TESOL, Teachers College, Columbia University. Focused on language learning, educational research, and cultural immersion.</p>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div>
+        <p class="cta">Book a free consultation</p>
+        <p class="sub">www.thelanguageblueprint.org</p>
+        <p class="es">Hablamos Español</p>
+      </div>
+      <div class="contact">
+        <div><strong>Call/Text:</strong> 845-734-3995</div>
+        <div><strong>Email:</strong> thelanguageblueprint01@gmail.com</div>
+      </div>
+    </div>
+
+  </div>
+</div>
